@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tic Tac Toe</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="lib/font_awesome/css/font-awesome.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
+</head>
+<body>
+
+    <main class="container">
+        <div class="game-field">
+            <div id="item-1" class="item item-1"></div>
+            <div id="item-2" class="item item-2"></div>
+            <div id="item-3" class="item item-3"></div>
+            <div id="item-4" class="item item-4"></div>
+            <div id="item-5" class="item item-5"></div>
+            <div id="item-6" class="item item-6"></div>
+            <div id="item-7" class="item item-7"></div>
+            <div id="item-8" class="item item-8"></div>
+            <div id="item-9" class="item item-9"></div>
+
+            <div class="lines">
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+                <div class="line-3"></div>
+                <div class="line-4"></div>
+                <div class="line-5"></div>
+                <div class="line-6"></div>
+                <div class="line-7"></div>
+            </div>
+        </div>
+        <div class="statistics">
+            <div class="win-stat">Победы: <span id="win-score">0</span></div>
+            <div class="draw-stat">Ничьи: <span id="draw-score">0</span></div>
+            <div class="lose-stat">Поражения: <span id="lose-score">0</span></div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,295 @@
+@keyframes smooth-opacity {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes draw-horizontal-line {
+    from {
+        width: 1px;
+    }
+
+    to {
+        width: 500px;
+    }
+}
+
+@keyframes draw-vertical-line {
+    from {
+        height: 1px;
+    }
+
+    to {
+        height: 500px;
+    }
+}
+
+@keyframes draw-diagonal-line {
+    from {
+        height: 1px;
+    }
+
+    to {
+        height: 695px;
+    }
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+
+    background-color: #eee;
+}
+
+.container {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.game-field {
+    position: relative;
+
+    width: 500px;
+    height: 500px;
+    padding-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 0;
+}
+
+.game-field .item {
+    position: relative;
+
+    display: inline-block;
+    width: 160px;
+    height: 160px;
+
+    font-size: 146px;
+    color: #fff;
+}
+
+.game-field .item-1 {
+    border-bottom: 10px solid gray;
+    border-right: 10px solid gray;
+}
+
+.game-field .item-2 {
+    border-bottom: 10px solid gray;
+}
+
+.game-field .item-3 {
+    border-bottom: 10px solid gray;
+    border-left: 10px solid gray;
+}
+
+.game-field .item-4 {
+    border-bottom: 10px solid gray;
+    border-right: 10px solid gray;
+}
+
+.game-field .item-5 {
+    border-bottom: 10px solid gray;
+}
+
+.game-field .item-6 {
+    border-bottom: 10px solid gray;
+    border-left: 10px solid gray;
+}
+
+.game-field .item-8 {
+    border-left: 10px solid gray;
+    border-right: 10px solid gray;
+}
+
+.game-field .item i {
+    position: absolute;
+
+    -webkit-animation-name: smooth-opacity;
+    -moz-animation-name: smooth-opacity;
+    -o-animation-name: smooth-opacity;
+    animation-name: smooth-opacity;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+i.zero {
+    left: 15px;
+    top: 5px;
+
+    color: limegreen;
+}
+
+i.cross {
+    left: 23px;
+
+    color: orangered;
+}
+
+.lines {
+    position: absolute;
+    top: 20px;
+    left: 0;
+
+    width: 500px;
+    height: 500px;
+
+    -webkit-transform-origin: 260px 275px;
+    -moz-transform-origin: 260px 275px;
+    -ms-transform-origin: 260px 275px;
+    -o-transform-origin: 260px 275px;
+    transform-origin: 250px 250px;
+
+    z-index: -1;
+
+}
+
+.line-1 {
+    position: absolute;
+    top: 75px;
+
+    display: none;
+    height: 10px;
+    width: 500px;
+
+    background-color: #fff;
+}
+
+.line-2 {
+    position: absolute;
+    top: 245px;
+
+    display: none;
+    height: 10px;
+    width: 500px;
+
+    background-color: #fff;
+}
+
+.line-3 {
+    position: absolute;
+    top: 415px;
+
+    display: none;
+    height: 10px;
+    width: 500px;
+
+    background-color: #fff;
+}
+
+.line-4 {
+    position: absolute;
+    top: 20px;
+    left: 80px;
+
+    display: none;
+    height: 500px;
+    width: 10px;
+
+    background-color: #fff;
+}
+
+.line-5 {
+    position: absolute;
+    top: 20px;
+    left: 245px;
+
+    display: none;
+    height: 500px;
+    width: 10px;
+
+    background-color: #fff;
+}
+
+.line-6 {
+    position: absolute;
+    top: 20px;
+    left: 410px;
+
+    display: none;
+    height: 500px;
+    width: 10px;
+
+    background-color: #fff;
+}
+
+.line-7 {
+    position: absolute;
+    top: -95px;
+    left: 245px;
+
+    display: none;
+    height: 695px;
+    width: 10px;
+
+    background-color: #fff;
+}
+
+.line-1.show,
+.line-2.show,
+.line-3.show {
+    display: block;
+
+    -webkit-animation-name: draw-horizontal-line;
+    -moz-animation-name: draw-horizontal-line;
+    -o-animation-name: draw-horizontal-line;
+    animation-name: draw-horizontal-line;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.line-4.show,
+.line-5.show,
+.line-6.show {
+    display: block;
+
+    -webkit-animation-name: draw-vertical-line;
+    -moz-animation-name: draw-vertical-line;
+    -o-animation-name: draw-vertical-line;
+    animation-name: draw-vertical-line;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.line-7.show {
+    display: block;
+
+    -webkit-animation-name: draw-diagonal-line;
+    -moz-animation-name: draw-diagonal-line;
+    -o-animation-name: draw-diagonal-line;
+    animation-name: draw-diagonal-line;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.statistics {
+    padding-top: 40px;
+
+    text-align: center;
+}
+
+.statistics div {
+    display: inline-block;
+
+    font-size: 24px;
+}
+
+.statistics div:not(:last-child) {
+    margin-right: 20px;
+}
+
+.statistics span {
+    font-weight: bold;
+}
